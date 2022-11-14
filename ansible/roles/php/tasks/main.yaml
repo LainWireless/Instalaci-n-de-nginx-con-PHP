@@ -1,0 +1,19 @@
+- name: Install php
+  apt:
+    name: php
+    state: present
+
+- name: Install php-fpm
+  apt:
+    name: php-fpm
+    state: present
+
+- name: Copy index.html
+  copy:
+    src: info.php
+    dest: /{{item["datos"]["documentroot"]}}/info.php
+  with_items:
+    - "{{virtualhosts}}"
+  notify:
+    - Reiniciar php
+    - Reiniciar php-fpm
