@@ -1,4 +1,4 @@
-# Instalaci-n-de-nginx-con-PHP
+# Instalacion de nginx con PHP
 Realiza la configuración básica de nginx que ejecute scripts PHP creando una receta ansible. Utilizando como base la receta ansible que utilizaste para el taller 4, modifícala para añadir las siguientes funcionalidades:
 
     Instalación de los servicios (cada servicio se instalará y configurará en un rol diferenciado).
